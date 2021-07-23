@@ -21,8 +21,7 @@
 						</tr>
 						<tr>
 							<th width="200">패스워드</th>
-							<td width="300"><input type="password" id="password"
-								name="password"></td>
+							<td width="300"><input type="password" id="password" name="password"></td>
 						</tr>
 						<tr>
 							<th width="200">이 름</th>
