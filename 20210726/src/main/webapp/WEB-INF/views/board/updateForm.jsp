@@ -40,7 +40,7 @@
          <button type="button" onclick="location.href='boardList.do'">목록</button> &nbsp;&nbsp;&nbsp;
          <!-- <button type="button" onclick="location.href ='updateBoard.do?bId=${board.bId }&bTitle=${board.bTitle }&bContent=${board.bContent }'">수정</button> &nbsp;&nbsp;&nbsp; -->         
          <button type="submit">수정</button> &nbsp;&nbsp;&nbsp;
-         <button type="button" onclick="location.href='deleteBoard.do'">삭제</button>
+         <button type="reset">취소</button>
       </div>
       </form>
    </div>
