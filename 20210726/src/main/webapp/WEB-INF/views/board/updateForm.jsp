@@ -14,7 +14,7 @@
          <table border="1">
             <tr>
                <th width="100">글 번호</th>
-               <td width="70" align="center">${board.bId }</td>
+               <td width="70" align="center">${board.bId }<input type="hidden" id="bId" name="bId" value="${board.bId }"></td>
                <th width="100">작성자</th>
                <td width="150" align="center">${board.bWriter }</td>
                <th width="100">작성일자</th>
@@ -31,10 +31,9 @@
                <th width="100">글 내용</th>
                      <td colspan="7"><textarea rows="7" cols="65" id="bContent"
                            name="bContent" required="required">${board.bContent }</textarea></td>
-             
             </tr>
          </table>
-           <input type="hidden" id="bId" name="bId" value="${board.bId }">
+       
       </div><br>
       <div>
          <button type="button" onclick="location.href='boardList.do'">목록</button> &nbsp;&nbsp;&nbsp;
