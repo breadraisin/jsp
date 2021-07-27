@@ -36,11 +36,11 @@
 	<div>
 		<button type="button" onclick="location.href ='boardList.do'">목록</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick="location.href ='updateForm.do?bId=${board.bId }'">수정</button>&nbsp;&nbsp;&nbsp;
-		<button type="button" onclick="location.href ='deleteBoard.do'">삭제</button>
+		<button type="button" onclick="location.href ='deleteBoard.do?bId=${board.bId }'">삭제</button>
 	</div>
 	<div>
 		
 	</div>
-</div>
+</div> 
 </body>
 </html>

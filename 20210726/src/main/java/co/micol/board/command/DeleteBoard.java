@@ -13,7 +13,11 @@ public class DeleteBoard implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
+<<<<<<< HEAD
 		// TODO 게시글 삭제
+=======
+		// TODO 
+>>>>>>> refs/remotes/origin/master
 		BoardService dao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
 		vo.setbId(Integer.valueOf(request.getParameter("bId")));
@@ -28,6 +32,10 @@ public class DeleteBoard implements Command {
 		
 		return page;
 	}
+<<<<<<< HEAD
 	}
 
 
+=======
+}
+>>>>>>> refs/remotes/origin/master
