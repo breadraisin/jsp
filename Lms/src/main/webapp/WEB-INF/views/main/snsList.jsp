@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +44,7 @@
             <!-- Main Content -->
             <div id="content">
 	<jsp:include page="topbar.jsp"></jsp:include>
-    <jsp:include page="boardList.jsp"></jsp:include> <!-- 몸체 -->
+    <jsp:include page="sns.jsp"></jsp:include> <!-- 몸체 -->
     <jsp:include page="footer.jsp"></jsp:include>  
 	</div>    
         </div>

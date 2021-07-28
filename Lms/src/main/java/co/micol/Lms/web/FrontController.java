@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import co.micol.Lms.command.Command;
 import co.micol.Lms.command.Login;
 import co.micol.Lms.command.LoginForm;
+import co.micol.Lms.command.Logout;
 import co.micol.Lms.command.Main;
+import co.micol.Lms.command.SearchSns;
+import co.micol.Lms.command.SnsList;
 
 /**
  * Servlet implementation class FrontController
@@ -39,6 +42,9 @@ public class FrontController extends HttpServlet {
 		map.put("/main.do", new Main());
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new Login());
+		map.put("/logout.do", new Logout());
+		map.put("/snsList.do", new SnsList());
+		map.put("/searchSns.do", new SearchSns());
 	}
 
 	/**

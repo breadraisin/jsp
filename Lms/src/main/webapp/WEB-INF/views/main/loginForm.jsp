@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>SB Admin 2 - Login</title>
+<title>Login</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
@@ -64,7 +64,7 @@
 													Me</label>
 											</div>
 										</div>
-										<input type = "submit" class="btn btn-primary btn-user btn-block"> Login
+										<input type = "submit" class="btn btn-primary btn-user btn-block">
 									</form>
 								</div>
 							</div>
