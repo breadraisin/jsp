@@ -11,9 +11,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.yedam.business.command.BoardList;
+import co.yedam.business.command.BoardSelect;
 import co.yedam.business.command.Home;
 import co.yedam.business.command.Login;
 import co.yedam.business.command.LoginForm;
+import co.yedam.business.command.Logout;
+import co.yedam.business.command.MemberInsert;
 import co.yedam.business.common.Command;
 
 
@@ -34,8 +38,12 @@ public class FrontController extends HttpServlet {
 
     public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new Home());
+		map.put("/memberInsert.do", new MemberInsert());
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new Login());
+		map.put("/logout.do", new Logout());
+		map.put("/boardList.do", new BoardList());
+		map.put("/boardSelect.do", new BoardSelect());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

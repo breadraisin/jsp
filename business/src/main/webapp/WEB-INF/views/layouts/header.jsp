@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,11 +25,11 @@
 
               <div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
-              <ul class="site-menu js-clone-nav d-none d-lg-block">
+              <ul class="site-menu js-clone-nav d-lg-block">
                 <li class="active">
                   <a href="home.do">Home</a>
                 </li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="boardList.do">Notice</a></li>
                 <li><a href="contact.html">Contact</a></li>
                     <li class="has-children">
                   <a href="#">Dropdown</a>
@@ -38,7 +39,18 @@
                     <li><a href="#">Menu Three</a></li>
                   </ul>
                 </li>
+                
+                <c:if test="${empty name}">
                 <li><a href="loginForm.do">Login / Register</a></li>
+                </c:if>
+                <c:if test="${author eq 'USER'}">
+                <li><a href="myPage.do">MyPage</a></li>
+                 <li><a href="logout.do">Logout</a></li>
+                </c:if>
+                 <c:if test="${author eq 'ADMIN' }">
+      			<li><a href="#about">Members</a></li>
+      			<li><a href="logout.do">Logout</a></li>
+      			</c:if>
               </ul>
             </nav>
 

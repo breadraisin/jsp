@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,8 +19,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
 
-
-    <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
     
@@ -59,33 +57,35 @@
         <div class="row justify-content-center">
           <div class="col-md-5 mb-5">
             <h3 class="mb-5">Register</h3>
-            <form action="#" method="post" class="bg-white">
+            <form id="frm" name="frm" action="memberInsert.do" method="post" class="bg-white">
               
               <div class="">
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_fname" class="text-black">Username <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_fname" name="c_fname">
+                    <label for="id" class="text-black">id <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="id" name="id">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_email" class="text-black">Email <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" id="c_email" name="c_email" placeholder="">
+                    <label for="password" class="text-black">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password">
                   </div>
                 </div>
-                <div class="form-group row">
+                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_pass" class="text-black">Password <span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="c_pass" name="c_pass">
+                    <label for="name" class="text-black">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" name="name">
                   </div>
                 </div>
-                <div class="form-group row">
+                  <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_repass" class="text-black">Re-type Password <span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="c_repass" name="c_repass">
+                    <label for="email" class="text-black">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="">
                   </div>
                 </div>
+               
+                
                 
                 
                 <div class="form-group row">
@@ -103,14 +103,14 @@
               <div class="">
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_uname" class="text-black">Username <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="c_uname" name="c_uname">
+                    <label for="id" class="text-black">ID <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="id" name="id">
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-md-12">
-                    <label for="c_password" class="text-black">Password <span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="c_password" name="c_password">
+                    <label for="password" class="text-black">Password <span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" id="password" name="password">
                   </div>
                 </div>
                 

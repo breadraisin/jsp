@@ -20,7 +20,7 @@ public class Login implements Command {
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		MemberService dao = new MemberServiceImpl(); //멤버
-		BoardService boardDao = new BoardServiceImpl(); //게시판 Table
+		//BoardService boardDao = new BoardServiceImpl(); //게시판 Table
 		HttpSession session = request.getSession();
 		MemberVO vo = new MemberVO();
 		vo.setId(request.getParameter("id"));
@@ -32,9 +32,9 @@ public class Login implements Command {
 			session.setAttribute("name", vo.getName());
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("id", vo.getId());
-			List<BoardVO> list = boardDao.boardSelectList();
-			request.setAttribute("boardList", list);
-			page = "main.do";
+			//List<BoardVO> list = boardDao.boardSelectList();
+			//request.setAttribute("boardList", list);
+			page = "home.do";
 		}else {
 			page = "loginForm.do";
 		}
