@@ -8,13 +8,13 @@
   <definition name="myapp.homepage" template="/WEB-INF/views/layouts/classic.jsp">
     <put-attribute name="header" value="/WEB-INF/views/layouts/header.jsp" />
     <put-attribute name="menu" value="/WEB-INF/views/layouts/menu.jsp" />
-    <put-attribute name="body" value="" />
+    <put-attribute name="body" value="/WEB-INF/views/layouts/body.jsp" />
     <put-attribute name="footer" value="/WEB-INF/views/layouts/footer.jsp" />
     
   </definition>
   
   <definition name="WILDCARD:*/*" extends="myapp.homepage">
-  	<put-attribute name="body" value="/WEB-INF/views/member/loginForm.jsp"></put-attribute>
+  	<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"></put-attribute>
   </definition>
   
 </tiles-definitions>

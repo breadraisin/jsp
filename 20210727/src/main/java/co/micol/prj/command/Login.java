@@ -13,23 +13,23 @@ public class Login implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO 로그인 과정 처리
+		// TODO 濡쒓렇�씤 怨쇱젙 泥섎━
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
-		HttpSession session = request.getSession(); //세션객체 호출
+		HttpSession session = request.getSession(); //�꽭�뀡媛앹껜 �샇異�
 		System.out.println(session.getId() + "==================");
 		vo.setId(request.getParameter("id"));
 		vo.setPassword(request.getParameter("password"));
 		vo = dao.memberLogin(vo);
 		String page = "";
 		
-		if(vo.getName() != null) {	//vo.getName() != null
+		if(vo.getName() != null) {
 			session.setAttribute("name", vo.getName());
 			session.setAttribute("author", vo.getAuthor());
 			session.setAttribute("id", vo.getId());
 			page = "member/loginSuccess";
 		} else {
-			String message = "존재하지 않는 아이디 또는 패스워드가 틀립니다.∵";
+			String message = "존재하지 않는 아이디 또는 패스워드가 틀립니다.";
 			request.setAttribute("message", message);
 			page="member/memberError";
 		}

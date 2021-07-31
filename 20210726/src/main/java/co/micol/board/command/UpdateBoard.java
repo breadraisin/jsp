@@ -11,7 +11,7 @@ public class UpdateBoard implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO 글 수정
+		// TODO 
 		BoardService dao = new BoardServiceImpl();
 		BoardVO vo = new BoardVO();
 		vo.setbTitle(request.getParameter("bTitle"));
@@ -23,7 +23,7 @@ public class UpdateBoard implements Command {
 			page = "boardList.do";
 			
 		}else {
-			page = "board/boardInsertFail";
+			page = "board/boardUpdateFail";
 		}
 		
 		return page;
