@@ -9,7 +9,7 @@
 </head>
 <body>
 <div align="center">
-	<table border="1">
+	
 		<tr>
 			<td colspan="2"><tiles:insertAttribute name="header" /></td>
 		</tr>
@@ -19,7 +19,7 @@
 		<tr>
 			<td colspan="2"><tiles:insertAttribute name="footer" /></td>
 		</tr>
-	</table>
+	
 	</div>
 </body>
 </html>
