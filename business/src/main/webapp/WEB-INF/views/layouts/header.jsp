@@ -16,7 +16,7 @@
 
 
           <div class="col-3">
-            <h1 class="site-logo"><a href="index.html" class="h2">Podcast<span class="text-primary">.</span> </a></h1>
+            <a href="home.do"><img src="images/yedam.png" alt="Image" class="img-fluid"></a>
           </div>
           <div class="col-9">
             <nav class="site-navigation position-relative text-right text-md-right" role="navigation">
