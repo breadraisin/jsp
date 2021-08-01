@@ -66,40 +66,59 @@
 <div class="col-md-12 text-center mb-5">
             <h2 class="display-5 mb-5 text-black">공지사항 목록</h2>
           </div>
+	<div align="center">
+	<div><h1>게시판 작성</h1></div>
+	<div>
+	<form id="frm" name="frm" action="insertBoard.do" method="post">
 	<div>
 		<table border="1">
 			<tr>
-				<th width ="70">번호</th>
-				<th width ="300">글 제목</th>
-				<th width ="150">작성자</th>
-				<th width ="150">작성일자</th>
-				<th width ="70">조회수</th>
+				<th width="100">작성자</th>
+				<td width="150" ><input type="text" id="bWriter" name="bWriter" required="required" value="관리자"></td>
+				<th width="100">작성일자</th>
+				<td width="150"><input type="date" id="bDate" name="bDate"></td>
 			</tr>
-			<c:forEach var="board" items="${boards }">
-				<tr onmouseover="this.style.background='lightblue'" onmouseout="this.style.background='white'"
-					onclick="getRecord(${board.bId})">
-					<td align="center">${board.bId }</td>
-					<td>${board.bTitle }</td>
-					<td align="center">${board.bWriter }</td>
-					<td align="center">${board.bDate }</td>
-					<td align="center">${board.bHit }</td>
-				</tr>
-			</c:forEach>
-		</table>
+			<tr>
+				<th width="100">글제목</th>
+				<td colspan="3"><input type="text" id="bTitle" name="bTitle" size="60" required="required"></td>
+			</tr>
+			<tr>
+				<th width="100">내용</th>
+				<td colspan="3">
+					<textarea rows="7" cols="65" id="bContent" name="bContent" required="required" placeholder="여기다 내용을 써 주세요"></textarea>
+				</td>
+			</tr>
+		</table>	
 	</div><br/>
 	<div>
-		<button type = "button" onclick="location.href='home.do'">홈 가기</button> &nbsp;&nbsp;&nbsp;
-		<c:if test="${author eq 'ADMIN' }"><button type = "button" onclick="location.href='insertForm.do'">새글작성</button></c:if>
+		<button type="submit" >등록</button>&nbsp;&nbsp;&nbsp;
+		<button type="reset">취소</button>&nbsp;&nbsp;&nbsp;
+		<button type="button" onclick="location.href ='boardList.do'">목록</button>
 	</div>
-	<div>
-		<form id="frm" name="frm" action="boardSelect.do" method="post">
-			<input type="hidden" id="bId" name="bId">
-		</form>
+	</form>
 	</div>
 </div>
     </div>
     
-  
+    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <h2>Subscribe</h2>
+            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit nihil saepe libero sit odio obcaecati veniam.</p>
+            <form action="#" method="post" class="site-block-subscribe">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>  
 
     
   </div>

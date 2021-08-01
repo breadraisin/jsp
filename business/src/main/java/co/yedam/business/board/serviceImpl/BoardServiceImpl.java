@@ -110,26 +110,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int boardUpdate(BoardVO vo) {
-		// TODO 한 행 삭제하기
-				String sql = "delete from board where bid = ?";
-				int n = 0;
-				try {
-					conn = DAO.getConnection();
-					psmt = conn.prepareStatement(sql);
-					psmt.setInt(1, vo.getbId());
-					n = psmt.executeUpdate();
-				}catch(SQLException e) {
-					e.printStackTrace();
-				}finally {
-					close();
-				}
-				return n;
-			}
-	
-
-	@Override
-	public int boardDelete(BoardVO vo) {
-		// TODO 글 제목, 내용만 변경
+		// TODO 
 		String sql = "update board set btitle =?, bcontent = ? where bid=?";
 		int n = 0;
 		try {
@@ -146,7 +127,29 @@ public class BoardServiceImpl implements BoardService {
 			close();
 		}
 		return n;
-	}
+	}	
+		
+		
+	
+
+	@Override
+	public int boardDelete(BoardVO vo) {
+		// TODO 
+
+		String sql = "delete from board where bid = ?";
+				int n = 0;
+				try {
+					conn = DAO.getConnection();
+					psmt = conn.prepareStatement(sql);
+					psmt.setInt(1, vo.getbId());
+					n = psmt.executeUpdate();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}finally {
+					close();
+				}
+				return n;
+			}
 	
 
 	private void close() {
