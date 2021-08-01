@@ -60,46 +60,51 @@
      
     
 
-    <div class="site-section pt-3">
-      <div class="container">
-        <div align="center">
-<div class="col-md-12 text-center mb-5">
-            <h2 class="display-5 mb-5 text-black">공지사항 목록</h2>
-          </div>
-	<div align="center">
-	<div><h1>게시판 작성</h1></div>
-	<div>
+       <div class="container">
+            <hr/>
+            <div class="row">
+                <div class="col-md-12" >
 	<form id="frm" name="frm" action="insertBoard.do" method="post">
-	<div>
-		<table border="1">
-			<tr>
-				<th width="100">작성자</th>
-				<td width="150" ><input type="text" id="bWriter" name="bWriter" required="required" value="관리자"></td>
-				<th width="100">작성일자</th>
-				<td width="150"><input type="date" id="bDate" name="bDate"></td>
-			</tr>
-			<tr>
-				<th width="100">글제목</th>
-				<td colspan="3"><input type="text" id="bTitle" name="bTitle" size="60" required="required"></td>
-			</tr>
-			<tr>
-				<th width="100">내용</th>
-				<td colspan="3">
-					<textarea rows="7" cols="65" id="bContent" name="bContent" required="required" placeholder="여기다 내용을 써 주세요"></textarea>
-				</td>
-			</tr>
-		</table>	
-	</div><br/>
-	<div>
+	
+                    <table class="table table-condensed" >
+                        <thead>
+                            <tr>
+                                <td width="20%" align="center" >제목</th>
+                                <td width="60%" align="left" ><input type="text" id="bTitle" name="bTitle" size="60" required="required"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr align="center">
+                                <td>작성일
+                                </td>
+                                <td align="left">
+                               <input type="date" id="bDate" name="bDate">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                            <td>글쓴이
+                                </td>
+                                <td align="left"><input type="text" id="bWriter" name="bWriter" required="required" value="관리자">
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td colspan="2">
+                                    <p><textarea rows="7" cols="120" id="bContent" name="bContent" required="required" placeholder="여기다 내용을 써 주세요"></textarea></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+		<div>
 		<button type="submit" >등록</button>&nbsp;&nbsp;&nbsp;
 		<button type="reset">취소</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick="location.href ='boardList.do'">목록</button>
 	</div>
-	</form>
-	</div>
+		</form>
+		</div>
+		</div>
 </div>
     </div>
-    
+    </div>
     <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">

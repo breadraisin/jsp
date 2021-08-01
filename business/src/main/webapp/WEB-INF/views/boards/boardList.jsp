@@ -50,7 +50,7 @@
         <div class="row align-items-center">
           <div class="col-12 text-center">
             <h1 class="mb-0">Notice</h1>
-            <a href="#">Home</a><span class="mx-2">&bullet;</span> About Us
+            <a href="home.do">Home</a><span class="mx-2">&bullet;</span> 공지사항
           </div>
         </div>
       </div>
@@ -63,11 +63,9 @@
     <div class="site-section pt-3">
       <div class="container">
         <div align="center">
-<div class="col-md-12 text-center mb-5">
-            <h2 class="display-5 mb-5 text-black">공지사항 목록</h2>
-          </div>
+
 	<div>
-		<table border="1">
+		<table class="table table-striped">
 			<tr>
 				<th width ="70">번호</th>
 				<th width ="300">글 제목</th>
@@ -76,7 +74,8 @@
 				<th width ="70">조회수</th>
 			</tr>
 			<c:forEach var="board" items="${boards }">
-				<tr onmouseover="this.style.background='lightblue'" onmouseout="this.style.background='white'"
+			<tr onmouseover="this.style.background='lightgray'" onmouseout="this.style.background='white'"
+				
 					onclick="getRecord(${board.bId})">
 					<td align="center">${board.bId }</td>
 					<td>${board.bTitle }</td>

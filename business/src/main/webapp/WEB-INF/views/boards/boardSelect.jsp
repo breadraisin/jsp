@@ -54,41 +54,58 @@
      
     
 
-    <div class="site-section pt-3">
       <div class="container">
-        <div align="center">
-<div class="col-md-12 text-center mb-5">
-            <h2 class="display-5 mb-5 text-black">공지사항 목록</h2>
-          </div>
+            <hr/>
+            <div class="row">
+                <div class="col-md-12" >
+
+	
+                    <table class="table table-condensed" >
+                        <thead>
+  		<tr>
+                                <td width="20%" align="center" >글번호</td>
+                                <td width="60%" align="left" >${board.bId }</td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="center" >제목</td>
+                                <td width="60%" align="left" >${board.bTitle }</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr align="center">
+                                <td>작성일
+                                </td>
+                                <td align="left">
+                               ${board.bDate }
+                                </td>
+                            </tr>
+                            <tr align="center">
+                            <td>글쓴이
+                                </td>
+                                <td align="left">${board.bWriter }
+                                </td>
+ 		    <td>
+                          <span style='float:right'>${board.bHit }</span>
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td colspan="2">
+                                    <p><textarea rows="7" cols="120">${board.bContent }</textarea></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 		<div>
-		<table border="1">
-			<tr>
-				<th width="100">글번호</th>
-				<td width="70" align="center">${board.bId }</td>
-				<th width="100">작성자</th>
-				<td width="150" align="center">${board.bWriter }</td>
-				<th width="100">작성일자</th>
-				<td width="150" align="center">${board.bDate }</td>
-				<th width="100">조회수</th>
-				<td width="70" align="center">${board.bHit }</td>
-			</tr>
-			<tr>
-				<th width="100">글제목</th>
-				<td colspan="7">${board.bTitle }</td>
-			</tr>
-			<tr>
-				<th width="100">내용</th>
-				<td colspan="7">
-					<textarea rows="7" cols="110">${board.bContent }</textarea>
-				</td>
-			</tr>
-		</table>	
-	</div><br/>
-	<div>
 		<button type="button" onclick="location.href ='boardList.do'">목록</button>&nbsp;&nbsp;&nbsp;
 		<c:if test="${author eq 'ADMIN' }"><button type="button" onclick="location.href ='updateForm.do?bId=${board.bId }'">수정</button></c:if>&nbsp;&nbsp;&nbsp;
 		<c:if test="${author eq 'ADMIN' }"><button type="button" onclick="location.href ='deleteBoard.do?bId=${board.bId }'">삭제</button></c:if>
 	</div>
+	</div>
+
+		</div>
+		</div>
+</div>
+    </div>
 	<div>
 		
 	</div>

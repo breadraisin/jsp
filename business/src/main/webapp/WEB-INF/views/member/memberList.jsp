@@ -6,12 +6,7 @@
 
   <head>
     <title>Podcast &mdash; Colorlib Website Template</title>
-    <script type = "text/javascript">
-	function getRecord(n){
-		frm.sns.value = n;
-		frm.submit();
-	}
-</script>
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -66,62 +61,40 @@
 <div class="col-md-12 text-center mb-5">
             <h2 class="display-5 mb-5 text-black">공지사항 목록</h2>
           </div>
-	   <div><h1>게시글 상세 보기</h1></div>
-      <form id="frm" name="frm" action="updateSns.do" method="post">
-      <div>
-         <table border="1">
-            <tr>
-               <th width="100">글 번호</th>
-               <td width="70" align="center">${sns.sNo }<input type="hidden" id="bId" name="bId" value="${board.bId }"></td>
-               <th width="100">작성자</th>
-               <td width="150" align="center">${sns.sWriter }</td>
-               <th width="100">작성일자</th>
-               <td width="150" align="center">${sns.sDate }</td>
-              
-            </tr>
-            <tr>
-               <th width="100">글 제목</th>
-                     <td colspan="7"><input type="text" id="bTitle" name="bTitle"
-                        size="60" required="required" value="${sns.sTitle }"></td>
-            </tr>
-            <tr>
-               <th width="100">글 내용</th>
-                     <td colspan="7"><textarea rows="7" cols="65" id="bContent"
-                           name="bContent" required="required">${sns.sContents }</textarea></td>
-            </tr>
-         </table>
-       
-      </div><br>
-      <div>
-         <button type="button" onclick="location.href='boardList.do'">목록</button> &nbsp;&nbsp;&nbsp;
-         <!-- <button type="button" onclick="location.href ='updateBoard.do?bId=${board.bId }&bTitle=${board.bTitle }&bContent=${board.bContent }'">수정</button> &nbsp;&nbsp;&nbsp; -->         
-         <button type="submit">수정</button> &nbsp;&nbsp;&nbsp;
-         <button type="reset">취소</button>
-      </div>
-      </form>
-   </div><br/>
+	<div>
+		<div class="table-responsive">
+				<div>
+		<table border="1">
+			<tr>
+				<th width="150">아 이 디</th>
+				<th width="150">패스워드</th>
+				<th width="150">이   름</th>
+				<th width="150">나   이</th>
+			</tr>
+			<c:forEach  var="member" items="${members }">
+				<tr>
+					<td align="center">${member.id }</td>
+					<td align="center">${member.password }</td>
+					<td align="center">${member.name }</td>
+					<td align="center">${member.email }</td>
+				</tr>
+			</c:forEach>
+		</table>
+			</div>
+	</div><br/>
+	<div>
+		<button type = "button" onclick="location.href='home.do'">홈 가기</button> &nbsp;&nbsp;&nbsp;
+		<button type = "button" onclick="location.href='snsInsertForm.do'">새글작성</button>
+	</div>
+	<div>
+		<form id="frm" name="frm" action="snsSelect.do" method="post">
+			<input type="hidden" id="sNo" name="sNo">
+		</form>
+	</div>
 </div>
     </div>
     
-    <div class="site-blocks-cover overlay inner-page-cover" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-
-          <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <h2>Subscribe</h2>
-            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit nihil saepe libero sit odio obcaecati veniam.</p>
-            <form action="#" method="post" class="site-block-subscribe">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-                  </div>
-                </div>
-              </form>
-          </div>
-        </div>
-      </div>
-    </div>  
+  
 
     
   </div>

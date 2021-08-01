@@ -69,6 +69,8 @@
 	<div>
 		<div class="container">
 			<form id="frm" name="frm" action="insertComment.do" method="post">
+			<input type="hidden" name="sno" value="${sns.sNo }"/>
+			
 					<h3>글보기</h3>
 					<p>작성자 : ${list[0].sWriter } 작성일자 : ${list[0].sDate }</p>
 					<p>${list[0].sContents  }</p>
@@ -78,10 +80,29 @@
 					
 			<div>
 	
+		<form id="frm" name="frm" action="insertComment.do" method="post">
+      <div>
+        <!--   <table border="1">
+            <tr>
+               <th width="100">글 번호</th>
+               <td width="70" align="center">${comments.sNo }<input type="hidden" id="sNo" name="sNo" value="${comments.sNo }"></td>
+               <th width="100">작성자</th>
+               <td width="150" align="center">${comments.cName }</td>
+               <th width="100">작성일자</th>
+               <td width="150" align="center">${comments.cDate }</td>
+               <th width="100">조회수</th>
+               <td width="70" align="center">${comments.cSubject }
+            </tr>
+           
+         </table>-->
+	
 		<table border="1">
 			<tr>
 				<th width="100">작성자</th>
-				<td width="150" ><input type="text" id="cName" name="cName" required="required" value="${name}" ></td>
+				<input type="hidden" id="sNo" name="sNo" value="${sns.sNo }">
+				<td width="150" ><input type="text" id="cName" name="cName" required="required" value="${cName}"></td>
+				<th width="100">작성일자</th>
+				<td width="150"><input type="date" id="cDate" name="cDate"></td>
 			</tr>
 			<tr>
 				<th width="100">내용</th>
@@ -89,12 +110,11 @@
 					<textarea rows="7" cols="65" id="cSubject" name="cSubject" required="required" placeholder="여기다 내용을 써 주세요"></textarea>
 				</td>
 			</tr>
-		</table>	
+		</table>
 	
 	</div><br/>
 	
 	<div>
-	<button type="button" onclick="location.href ='insertComment.do?sNo=${list[0].sNo }'">등록</button>
 		<button type="submit" >등록</button>&nbsp;&nbsp;&nbsp;
 		<button type="reset">취소</button>&nbsp;&nbsp;&nbsp;
 		<button type="button" onclick="location.href ='snsList.do'">목록</button>

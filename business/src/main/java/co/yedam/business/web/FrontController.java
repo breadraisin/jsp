@@ -24,6 +24,7 @@ import co.yedam.business.command.Login;
 import co.yedam.business.command.LoginForm;
 import co.yedam.business.command.Logout;
 import co.yedam.business.command.MemberInsert;
+import co.yedam.business.command.MemberList;
 import co.yedam.business.command.SnsList;
 import co.yedam.business.command.SnsSelect;
 import co.yedam.business.command.SnsUpdateForm;
@@ -51,6 +52,7 @@ public class FrontController extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
 		map.put("/home.do", new Home());
 		map.put("/memberInsert.do", new MemberInsert());
+		map.put("/memberList.do", new MemberList());
 		map.put("/loginForm.do", new LoginForm());
 		map.put("/login.do", new Login());
 		map.put("/logout.do", new Logout());

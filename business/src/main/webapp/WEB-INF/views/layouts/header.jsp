@@ -52,7 +52,7 @@
                 </c:if>
                  <c:if test="${author eq 'ADMIN' }">
                   <li><a href="snsList.do">Community</a></li>
-      			<li><a href="#about">Members</a></li>
+      			<li><a href="memberList.do">Members</a></li>
       			<li><a href="logout.do">Logout</a></li>
       			</c:if>
               </ul>
