@@ -26,11 +26,12 @@
               <div class="d-block d-lg-none ml-md-0 mr-auto"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
 
               <ul class="site-menu js-clone-nav d-lg-block">
-                <li class="active">
+                   <li class="active">
                   <a href="home.do">Home</a>
                 </li>
-                <li><a href="boardList.do">Notice</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="boardList.do">Notice</a></li>
+               
+               
                     <li class="has-children">
                   <a href="#">Dropdown</a>
                   <ul class="dropdown arrow-top">
@@ -41,13 +42,16 @@
                 </li>
                 
                 <c:if test="${empty name}">
+             
                 <li><a href="loginForm.do">Login / Register</a></li>
                 </c:if>
                 <c:if test="${author eq 'USER'}">
+                 <li><a href="snsList.do">Community</a></li>
                 <li><a href="myPage.do">MyPage</a></li>
                  <li><a href="logout.do">Logout</a></li>
                 </c:if>
                  <c:if test="${author eq 'ADMIN' }">
+                  <li><a href="snsList.do">Community</a></li>
       			<li><a href="#about">Members</a></li>
       			<li><a href="logout.do">Logout</a></li>
       			</c:if>

@@ -14,15 +14,22 @@ import javax.servlet.http.HttpServletResponse;
 import co.yedam.business.command.BoardList;
 import co.yedam.business.command.BoardSelect;
 import co.yedam.business.command.DeleteBoard;
+import co.yedam.business.command.DeleteSns;
 import co.yedam.business.command.Home;
 import co.yedam.business.command.InsertBoard;
+import co.yedam.business.command.InsertComment;
 import co.yedam.business.command.InsertForm;
+import co.yedam.business.command.InsertSns;
 import co.yedam.business.command.Login;
 import co.yedam.business.command.LoginForm;
 import co.yedam.business.command.Logout;
 import co.yedam.business.command.MemberInsert;
+import co.yedam.business.command.SnsList;
+import co.yedam.business.command.SnsSelect;
+import co.yedam.business.command.SnsUpdateForm;
 import co.yedam.business.command.UpdateBoard;
 import co.yedam.business.command.UpdateForm;
+import co.yedam.business.command.SnsInsertForm;
 import co.yedam.business.common.Command;
 
 
@@ -54,6 +61,16 @@ public class FrontController extends HttpServlet {
 		map.put("/updateForm.do", new UpdateForm());
 		map.put("/deleteBoard.do", new DeleteBoard());
 		map.put("/updateBoard.do", new UpdateBoard());
+		map.put("/snsList.do", new SnsList());
+		map.put("/snsSelect.do", new SnsSelect());
+		map.put("/snsInsertForm.do", new SnsInsertForm());
+		map.put("/insertSns.do", new InsertSns());
+		map.put("/snsUpdateForm.do", new SnsUpdateForm());
+		map.put("/deleteSns.do", new DeleteSns());
+		map.put("/insertComment.do", new InsertComment());
+
+
+
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
