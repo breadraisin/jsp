@@ -30,6 +30,7 @@ import co.yedam.business.command.SnsSelect;
 import co.yedam.business.command.SnsUpdateForm;
 import co.yedam.business.command.UpdateBoard;
 import co.yedam.business.command.UpdateForm;
+import co.yedam.business.command.UpdateSns;
 import co.yedam.business.command.SnsInsertForm;
 import co.yedam.business.common.Command;
 
@@ -70,7 +71,7 @@ public class FrontController extends HttpServlet {
 		map.put("/snsUpdateForm.do", new SnsUpdateForm());
 		map.put("/deleteSns.do", new DeleteSns());
 		map.put("/insertComment.do", new InsertComment());
-
+		map.put("/updateSns.do", new UpdateSns());
 
 
 	}

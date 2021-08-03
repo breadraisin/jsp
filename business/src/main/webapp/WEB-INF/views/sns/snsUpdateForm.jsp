@@ -68,11 +68,12 @@
           </div>
 	   <div><h1>게시글 상세 보기</h1></div>
       <form id="frm" name="frm" action="updateSns.do" method="post">
+			<input type="hidden" name="sNo" value="${param.sNo }"/>
       <div>
          <table border="1">
             <tr>
                <th width="100">글 번호</th>
-               <td width="70" align="center">${sns.sNo }<input type="hidden" id="bId" name="bId" value="${board.bId }"></td>
+               <td width="70" align="center">${sns.sNo }</td>
                <th width="100">작성자</th>
                <td width="150" align="center">${sns.sWriter }</td>
                <th width="100">작성일자</th>
@@ -81,13 +82,13 @@
             </tr>
             <tr>
                <th width="100">글 제목</th>
-                     <td colspan="7"><input type="text" id="bTitle" name="bTitle"
+                     <td colspan="7"><input type="text" id="sTitle" name="sTitle"
                         size="60" required="required" value="${sns.sTitle }"></td>
             </tr>
             <tr>
                <th width="100">글 내용</th>
-                     <td colspan="7"><textarea rows="7" cols="65" id="bContent"
-                           name="bContent" required="required">${sns.sContents }</textarea></td>
+                     <td colspan="7"><textarea rows="7" cols="65" id="sContent"
+                           name="sContent" required="required">${sns.sContents }</textarea></td>
             </tr>
          </table>
        

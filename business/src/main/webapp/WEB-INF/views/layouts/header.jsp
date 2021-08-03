@@ -30,17 +30,7 @@
                   <a href="home.do">Home</a>
                 </li>
                  <li><a href="boardList.do">Notice</a></li>
-               
-               
-                    <li class="has-children">
-                  <a href="#">Dropdown</a>
-                  <ul class="dropdown arrow-top">
-                    <li><a href="#">Menu One</a></li>
-                    <li><a href="#">Menu Two</a></li>
-                    <li><a href="#">Menu Three</a></li>
-                  </ul>
-                </li>
-                
+              
                 <c:if test="${empty name}">
              
                 <li><a href="loginForm.do">Login / Register</a></li>
