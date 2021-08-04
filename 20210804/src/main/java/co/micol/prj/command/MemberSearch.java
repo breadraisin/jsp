@@ -8,18 +8,16 @@ import co.micol.prj.member.service.MemberService;
 import co.micol.prj.member.serviceImpl.MemberServiceImpl;
 import co.micol.prj.member.vo.MemberVO;
 
-public class MemberSelect implements Command {
+public class MemberSearch implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) {
 		MemberService memberDao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
-
-		String id = "hong";
-		vo.setId(request.getParameter(id));
-		vo = memberDao.memberSelect(vo);
-		request.setAttribute("member", vo);
-		return "member/memberSelect";
+		vo.setId("hong");
+		request.setAttribute("member", memberDao.memberSelect(vo));
+		
+		return "member/memberSearchResult";
 	}
 
 }
